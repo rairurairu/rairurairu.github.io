@@ -53,7 +53,10 @@ function Home() {
   return (
     <>
       <section className="hero wrap">
-        <Reveal className="badge" y={10} blur={false}><i aria-hidden="true" />{PERSON.availability}</Reveal>
+        <div className="badges">
+          <Reveal className="badge" y={10} blur={false}><i aria-hidden="true" />{PERSON.availability}</Reveal>
+          <Reveal className="badge win" y={10} blur={false} delay={0.08}><i aria-hidden="true" />{PERSON.win}</Reveal>
+        </div>
         <BlurWords text={PERSON.name} as="h1" delay={0.1} />
         <Reveal className="deg" delay={0.35} y={12}>{PERSON.degree}</Reveal>
         <Reveal as="p" className="lede" delay={0.5} y={12}>{PERSON.lede}</Reveal>
@@ -72,8 +75,8 @@ function Home() {
                 <span className="m">{p.meta}</span>
                 <span className="t">{p.title}</span>
                 <span className="s">{p.summary}</span>
-                <span className="n"><Count n={p.stat.n} d={p.stat.d || 0} pre={p.stat.pre || ""} /><small>{p.stat.u}</small></span>
-                <span className="l">{p.stat.l}</span>
+                {p.stat && <span className="n">{p.stat.text ? p.stat.text : <Count n={p.stat.n} d={p.stat.d || 0} pre={p.stat.pre || ""} />}<small>{p.stat.u}</small></span>}
+                {p.stat && <span className="l">{p.stat.l}</span>}
                 <span className="foot-row"><Tags items={p.tech} /><span className="go">Case study <span aria-hidden="true">→</span></span></span>
               </TiltCard>
             </Reveal>
@@ -101,6 +104,7 @@ function Home() {
             <p className="ev">{AWARD.event}</p>
             <p>{AWARD.role} <a href={AWARD.href}>Case study →</a></p>
           </div>
+          <div className="award-n"><span className="n"><Count n={AWARD.participants} />+</span><span className="l">participants</span></div>
         </Reveal>
       </section>
 
@@ -163,7 +167,7 @@ function Case({ slug }) {
       <Reveal className="facts" delay={0.4} blur={false}>
         {p.facts.map(([k, v]) => <div key={k}><dt>{k}</dt><dd>{v}</dd></div>)}
       </Reveal>
-      <div className="stats">
+      <div className={"stats n" + p.stats.length}>
         {p.stats.map((s, j) => (
           <Reveal key={j} className="stat" delay={j * 0.08}>
             <span className="n">{s.text ? s.text : <Count n={s.n} d={s.d || 0} pre={s.pre || ""} />}<small>{s.u}</small></span>

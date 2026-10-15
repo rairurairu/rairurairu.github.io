@@ -12,6 +12,7 @@ export const PERSON = {
   degree: "Industrial Engineering & Engineering Management + AI · HKUST",
   formal: "BEng in Industrial Engineering & Engineering Management, Extended Major in Artificial Intelligence · HKUST · Sep 2022 – Dec 2026",
   availability: "Internship now · Full-time from January 2027",
+  win: "Hackathon track winner · 200+ participants",
   lede: "Final-year student. I design AI systems and build them with Claude Code and Codex, which write about 95% of the code.",
 };
 
@@ -32,8 +33,9 @@ export const COURSE_ORDER = ["MATH4432", "IEDA4000I", "IEDA4000F", "IEDA3560", "
 export const AWARD = {
   title: "Winner, “Reinventing Insurance for an AI-native World” track",
   event: "Hong Kong AI Summit: BUILD ACROSS Hackathon",
-  meta: "Oct 2026 · 200+ participants · Track sponsored by bolttech",
-  role: "Team Fable 6.7 won the track with my original methodology for AI-native insurance: customers choose the monthly price and AI builds the cover. I mapped 21 pain points of traditional insurance across insurers, partners and customers and answered every one with 10 mechanisms in a monthly cycle, designed to serve customers that traditional insurance cannot reach at a profit. I then built the complete system myself.",
+  meta: "Oct 2026 · Track sponsored by bolttech",
+  participants: 200,
+  role: "Team Fable 6.7 won the track with my original methodology. I mapped the long-standing pain points of traditional insurance and answered them with AI-native insurance: customers choose the monthly price and AI builds the cover, so insurance can reach the customers traditional insurers cannot serve at a profit. I then built the complete system myself.",
   href: "/work/microinsurance/",
 };
 
@@ -57,21 +59,21 @@ export const PROJECTS = [
     slug: "microinsurance",
     title: "Budget-Based Microinsurance",
     meta: "Oct 2026 · Hackathon track winner",
-    summary: "My original methodology that reinvents insurance: customers choose the monthly price and AI builds the cover, answering all 21 pain points of traditional insurance.",
-    stat: { n: 21, u: "of 21", l: "pain points of traditional insurance answered" },
+    summary: "My original methodology answers the long-standing pain points of traditional insurance: customers choose the monthly price and AI builds the cover.",
+    stat: { text: "Winner", l: "“Reinventing Insurance for an AI-native World” track, 200+ participants" },
     courses: ["IEDA3250", "IEDA3010"],
     tech: ["Rust", "TypeScript", "Python", "Claude"],
     desc: "An AI-native redesign of insurance: customers choose the price and AI builds the cover. A hackathon-winning methodology, built into a complete working system.",
     facts: [["Role", "Product owner and architect"], ["Built with", "Rust, TypeScript, Python, Claude"], ["Award", "Winner, “Reinventing Insurance for an AI-native World” track"]],
     stats: [
-      { n: 21, u: "of 21", l: "pain points of traditional insurance answered" },
+      { text: "Winner", l: "“Reinventing Insurance for an AI-native World” track, among 200+ participants" },
       { n: 40, pre: "HK$", u: "/month", l: "starting price, possible because AI does the per-customer work" },
       { n: 1.6, d: 1, u: "s", l: "to settle automatic payouts for 1 million policies, against a 5-second target" },
     ],
     sections: [
       { h: "The problem", p: [
         "Small insurance fails on cost, not demand. Every policy needs per-customer work (proposal forms, explanations, prevention advice, claims handling), and at a few dollars a month that work costs more than the premium. So the customers who need small, flexible cover most are the ones traditional insurance cannot serve.",
-        "I mapped 21 pain points of traditional insurance across insurers, partners and customers, and set one rule for the redesign: every one of them had to be answered. My methodology answers all 21 with 10 mechanisms that run as a monthly cycle, from understanding the customer to cover, prevention, verification, reward, recovery and learning.",
+        "I mapped the long-standing pain points of traditional insurance across insurers, partners and customers, and designed the methodology so that every one of them is answered, in a monthly cycle that runs from understanding the customer to cover, prevention, verification, reward, recovery and learning.",
       ] },
       { h: "The product", p: [
         "Instead of picking a cover and getting a price, the customer picks a fixed monthly price, starting at HK$40, and AI builds a personal mix of cover around it, re-building it as life changes. Some covers pay out automatically on a published public trigger, with no claim form.",
@@ -106,7 +108,6 @@ export const PROJECTS = [
     facts: [["Role", "Researcher and system designer"], ["For", "HKUST's AI Observatory"], ["Built with", "Python, SQLite, LLM APIs"]],
     stats: [
       { n: 50, u: "of 51", l: "categories validated within two days of the redesign; the first approach validated one" },
-      { n: 13, u: "of 14", l: "failures turned into passes by fixing incomplete reference data, not the model" },
       { text: "⅔", u: "", l: "less evaluation cost, with AI answers counted only as leads until verified" },
     ],
     viz: { rows: [["First approach", 3, "1", true], ["After redesign", 98, "50 of 51", false]], cap: "Categories validated against verified brand lists" },
@@ -139,7 +140,6 @@ export const PROJECTS = [
     stats: [
       { n: 83, pre: "−", u: "%", l: "AI cost at the same solution quality (0.72% vs 0.75% from optimal)" },
       { n: 100, u: "%", l: "valid solutions in every trial on the benchmark suite" },
-      { n: 0.07, d: 2, u: "%", l: "average gap to optimal on a standard external benchmark" },
     ],
     viz: { rows: [["Writes the program", 100, "100%", true], ["Plans only", 17, "17%", false]], cap: "AI cost per solve, at the same solution quality (0.75% vs 0.72% from optimal)" },
     sections: [
@@ -163,15 +163,13 @@ export const PROJECTS = [
     title: "Polymarket Market-Making & Forecasting Models",
     meta: "Aug 2026 – Present · Quantitative research",
     summary: "Forecasting models that beat the standard Elo rating, then market-making research on Polymarket, with AI agents doing the heavy lifting.",
-    stat: { n: 3504, u: "", l: "held-out matches on which the forecasting models beat the standard Elo rating" },
     courses: ["MATH4432", "IEDA4130", "IEDA4000H"],
     tech: ["Python"],
-    desc: "AI-agent-driven quantitative research: forecasting models that beat the standard Elo rating on 3,504 held-out matches, then market-making research on Polymarket.",
+    desc: "AI-agent-driven quantitative research: forecasting models that beat the standard Elo rating, then market-making research on Polymarket.",
     facts: [["Role", "Researcher and system designer"], ["Stage", "Research and shadow trading"], ["Built with", "Python"]],
     stats: [
-      { n: 3504, u: "", l: "held-out matches on which the forecasting models beat the standard Elo rating" },
-      { n: 4.5, d: 1, u: "×", l: "more often sell quotes were hit than buy quotes, across 777,588 replayed orders" },
-      { n: 1444, u: "", l: "simulated decisions reviewed before retiring a signal, with no money at risk" },
+      { text: "Beat Elo", l: "forecasting models beat the standard Elo rating on matches they had never seen" },
+      { n: 4.5, d: 1, u: "×", l: "more often sell quotes were hit than buy quotes: the risk to price before quoting" },
     ],
     viz: { rows: [["Sell quotes hit", 100, "4.5×", false], ["Buy quotes hit", 22, "1×", true]], cap: "How often prices hit each side, across 777,588 replayed orders" },
     sections: [
