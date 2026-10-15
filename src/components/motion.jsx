@@ -167,9 +167,7 @@ export function useHideOnScroll() {
 
 export function Marquee({ items, reverse = false, duration = 48 }) {
   const item = (code, title, k) => (
-    <span className="mq-item" key={k} aria-hidden={k.endsWith("b") ? "true" : undefined}>
-      <b>{code}</b>{title}
-    </span>
+    <span className="mq-item" key={k} aria-hidden={k.endsWith("b") ? "true" : undefined}>{title}</span>
   );
   return (
     <div className={"mq" + (reverse ? " rev" : "")} style={{ "--dur": `${duration}s` }}>

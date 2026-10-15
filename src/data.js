@@ -12,7 +12,7 @@ export const PERSON = {
   degree: "Industrial Engineering & Engineering Management + AI · HKUST",
   formal: "BEng in Industrial Engineering & Engineering Management, Extended Major in Artificial Intelligence · HKUST · Sep 2022 – Dec 2026 (expected)",
   availability: "Internship now · Full-time from January 2027",
-  lede: "Final-year student at HKUST. I design AI systems and build them with Claude Code and Codex, which write about 95% of the code.",
+  lede: "Final-year student. I design AI systems and build them with Claude Code and Codex, which write about 95% of the code.",
 };
 
 export const COURSES = {
@@ -40,7 +40,7 @@ export const AWARD = {
   href: "/work/microinsurance/",
 };
 
-export const ROLES = ["AI engineer", "AI application engineer", "AI product and solutions", "AI-native transformation", "AI evaluation and research"];
+export const ROLES = ["AI engineer / AI application engineer", "AI product and solutions", "AI-native transformation"];
 
 export const SKILLS = [
   ["AI & LLMs", ["LLM components", "Evals and guardrails", "Structured outputs", "Model routing", "Human-in-the-loop", "Harness engineering", "Context engineering"]],
@@ -132,17 +132,17 @@ export const PROJECTS = [
   {
     slug: "llm-optimization",
     title: "Using LLMs for Optimization",
-    meta: "2026 · IEDA Final Year Project",
+    meta: "2026 · Final Year Project",
     summary: "As Experiment & Benchmarking Lead, showed an LLM works best as a planner inside a checked workflow.",
     stat: { n: 83, pre: "−", u: "%", l: "AI cost at the same solution quality" },
     courses: ["IEDA4000I", "IEDA3010"],
     tech: ["Python", "Pyomo", "DeepSeek", "MiniMax"],
-    desc: "IEDA Final Year Project, Experiment & Benchmarking Lead. Letting the LLM plan instead of writing the whole program cut AI cost 83% at the same solution quality.",
+    desc: "Final Year Project, Experiment & Benchmarking Lead. Letting the LLM plan instead of writing the whole program cut AI cost 83% at the same solution quality.",
     facts: [["Role", "Experiment & Benchmarking Lead"], ["Models", "DeepSeek, MiniMax"], ["Built with", "Python, Pyomo"]],
     stats: [
       { n: 83, pre: "−", u: "%", l: "AI cost at the same solution quality (0.72% vs 0.75% from optimal)" },
       { n: 100, u: "%", l: "valid solutions in every trial on the benchmark suite" },
-      { n: 9, u: "", l: "LLM failure modes catalogued and turned into practical design rules" },
+      { n: 0.07, d: 2, u: "%", l: "average gap to optimal on a standard external benchmark" },
     ],
     viz: { rows: [["Writes the program", 100, "100%", true], ["Plans only", 17, "17%", false]], cap: "AI cost per solve, at the same solution quality (0.75% vs 0.72% from optimal)" },
     sections: [

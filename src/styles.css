@@ -120,9 +120,8 @@ p { margin: 0 0 1em; }
 .roles { padding: 26px; border-radius: 20px; border: 1px solid var(--line); background: var(--panel); margin-top: 6px; }
 .roles h3 { font: 500 12px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
 .roles ul { list-style: none; margin: 0; padding: 0; }
-.roles li { display: grid; grid-template-columns: 34px 1fr; padding: 12px 0; border-bottom: 1px solid var(--line); font-size: 17px; }
-.roles li span { font: 500 12px/1.9 var(--mono); color: var(--acc-2); }
-.roles .when { margin: 16px 0 0; font-size: 14px; color: var(--muted); }
+.roles li { padding: 13px 0; border-bottom: 1px solid var(--line); font-size: 17px; }
+.roles li:last-child { border-bottom: 0; }
 @media (max-width: 860px) { .about { grid-template-columns: 1fr; } }
 
 /* Coursework marquee */
@@ -134,7 +133,6 @@ p { margin: 0 0 1em; }
 .mq.rev .mq-track { animation-direction: reverse; }
 .mq:hover .mq-track { animation-play-state: paused; }
 .mq-item { display: inline-flex; align-items: center; gap: 9px; margin-right: 12px; padding: 9px 16px; border-radius: 999px; background: rgba(255,255,255,.045); border: 1px solid var(--line); font-size: 15px; }
-.mq-item b { font: 500 11.5px/1 var(--mono); color: var(--acc-2); }
 @keyframes mq { to { transform: translateX(-50%); } }
 @media (prefers-reduced-motion: reduce) { .mq-track { animation: none; flex-wrap: wrap; white-space: normal; padding: 14px var(--gutter); } .mq-track > :nth-child(n + 6) { display: none; } }
 
@@ -145,7 +143,6 @@ p { margin: 0 0 1em; }
 .chips { display: flex; flex-wrap: wrap; gap: 8px; }
 .chips i { font-style: normal; font-size: 14px; padding: 7px 12px; border-radius: 999px; background: rgba(255,255,255,.05); border: 1px solid var(--line); }
 .chips.big i { display: inline-flex; gap: 9px; align-items: center; font-size: 15px; padding: 9px 16px; }
-.chips.big b { font: 500 11.5px/1 var(--mono); color: var(--acc-2); }
 @media (max-width: 760px) { .skills { grid-template-columns: 1fr; } }
 
 /* Contact */
@@ -188,7 +185,7 @@ p { margin: 0 0 1em; }
 .bar.dim { background: rgba(255,255,255,.28); }
 .viz .cap { margin: 2px 0 0; font: 500 11.5px/1.6 var(--mono); color: var(--faint); }
 @media (max-width: 480px) { .viz-row { grid-template-columns: 96px 1fr 64px; gap: 10px; } }
-.shots { display: grid; grid-template-columns: .8fr 1.2fr; gap: 16px; margin: 26px 0 8px; align-items: start; }
+.shots { display: grid; grid-template-columns: minmax(0, 440px); gap: 16px; margin: 26px 0 8px; }
 .shot { margin: 0; }
 .shot img { border-radius: 14px; border: 1px solid var(--line-2); }
 .shot figcaption { margin-top: 10px; font: 500 11.5px/1.6 var(--mono); color: var(--faint); }

@@ -45,8 +45,8 @@ function Shell({ children }) {
   );
 }
 
-function Tags({ codes }) {
-  return <span className="tags">{codes.map(c => <i key={c} title={COURSES[c]}>{c}</i>)}</span>;
+function Tags({ items }) {
+  return <span className="tags">{items.map(t => <i key={t}>{t}</i>)}</span>;
 }
 
 function Home() {
@@ -74,7 +74,7 @@ function Home() {
                 <span className="s">{p.summary}</span>
                 <span className="n"><Count n={p.stat.n} d={p.stat.d || 0} pre={p.stat.pre || ""} /><small>{p.stat.u}</small></span>
                 <span className="l">{p.stat.l}</span>
-                <span className="foot-row"><Tags codes={p.courses} /><span className="go">Case study <span aria-hidden="true">→</span></span></span>
+                <span className="foot-row"><Tags items={p.tech} /><span className="go">Case study <span aria-hidden="true">→</span></span></span>
               </TiltCard>
             </Reveal>
           ))}
@@ -113,8 +113,7 @@ function Home() {
         </div>
         <Reveal className="roles" delay={0.1}>
           <h3>Roles I'm looking for</h3>
-          <ul>{ROLES.map((r, i) => <li key={r}><span>0{i + 1}</span>{r}</li>)}</ul>
-          <p className="when">{PERSON.availability} · Hong Kong</p>
+          <ul>{ROLES.map(r => <li key={r}>{r}</li>)}</ul>
         </Reveal>
       </section>
 
@@ -185,10 +184,6 @@ function Case({ slug }) {
                 <img src="/assets/img/micro-cover.png" alt="Customer app: the monthly price split into personal covers, each explained in one plain sentence" width="440" height="480" loading="lazy" />
                 <figcaption>Customer app: the monthly price split into covers</figcaption>
               </Reveal>
-              <Reveal as="figure" className="shot" delay={0.1}>
-                <img src="/assets/img/micro-fairness.png" alt="Operations console: fairness audit comparing claim approval rates across groups, with one group flagged" width="786" height="400" loading="lazy" />
-                <figcaption>Operations console: fairness audit across customer groups</figcaption>
-              </Reveal>
             </div>
           )}
           {sec.list && (
@@ -206,7 +201,7 @@ function Case({ slug }) {
 
       <section className="chapter">
         <Reveal as="h2">Related coursework</Reveal>
-        <Reveal className="chips big">{p.courses.map(c => <i key={c}><b>{c}</b>{COURSES[c]}</i>)}</Reveal>
+        <Reveal className="chips big">{p.courses.map(c => <i key={c}>{COURSES[c]}</i>)}</Reveal>
       </section>
 
       <nav className="next" aria-label="More projects">
