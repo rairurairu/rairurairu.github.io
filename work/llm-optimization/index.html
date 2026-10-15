@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Using LLMs for Optimization · Tony Tsang</title>
+<meta name="description" content="IEDA Final Year Project, Experiment & Benchmarking Lead. Letting the LLM plan instead of writing the whole program cut AI cost 83% at the same solution quality.">
+<link rel="canonical" href="https://rairurairu.github.io/work/llm-optimization/">
+<meta property="og:title" content="Using LLMs for Optimization · Tony Tsang">
+<meta property="og:description" content="An LLM works best as a planner inside a checked workflow: 83% lower AI cost at the same solution quality.">
+<meta name="theme-color" content="#0e6b5b">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="/">Tony Tsang</a>
+    <nav class="nav" aria-label="Main">
+      <a href="/#work">Work</a>
+      <a class="hide-sm" href="/#how">How I work</a>
+      <a class="hide-sm" href="/#contact">Contact</a>
+      <a class="nav-cv" href="/cv/TSANG_Cheuk_Nam_CV.pdf">CV</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <p class="crumb"><a href="/#work">← All work</a></p>
+
+  <div class="case-hero">
+    <p class="eyebrow">Case study · IEDA Final Year Project · Completed 2026</p>
+    <h1>Using LLMs for Optimization</h1>
+    <p class="lede">Can large language models solve hard business optimization problems, such as planning delivery routes, reliably and cheaply? I led the experiments that answered it, and the answer was a design pattern: let the model plan, let a proven optimizer solve, and check everything.</p>
+    <div class="facts">
+      <span><b>Role</b> Experiment &amp; Benchmarking Lead</span>
+      <span><b>Models</b> DeepSeek, MiniMax</span>
+      <span><b>Built with</b> Python, Pyomo</span>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div><div class="n">−83%</div><div class="l">AI cost at the same solution quality (0.72% vs 0.75% from optimal)</div></div>
+    <div><div class="n">100%</div><div class="l">valid solutions in every trial on the benchmark suite</div></div>
+    <div><div class="n">9</div><div class="l">LLM failure modes catalogued and turned into practical design rules</div></div>
+  </div>
+
+  <div class="prose narrow">
+    <h2>The problem</h2>
+    <p>Asking an LLM to write a whole optimization program is expensive and brittle: long outputs, partial answers, and results that look valid but are not. A business can only rely on an LLM here if it knows which way of using the model gives correct answers at a sensible cost.</p>
+
+    <h2>What I led</h2>
+    <ul class="decisions">
+      <li><strong>A fair benchmark across prompts and providers</strong><span>I designed the experiments and built the benchmark: five prompting strategies on two model providers, run on the same problems and checked the same way. On the main suite, DeepSeek produced valid solutions every time and MiniMax 83% of the time.</span></li>
+      <li><strong>An outside test to rule out overfitting</strong><span>A standard external benchmark checked that the results held beyond the project's own test cases: valid solutions in every trial, on average 0.07% from optimal.</span></li>
+      <li><strong>Let the AI plan, let the optimizer solve</strong><span>Having the model write a short plan for a standard optimizer, instead of the whole program, used 29% of the tokens and cut AI cost 83%, at the same solution quality.</span></li>
+      <li><strong>Debug the “AI failure” that wasn't</strong><span>One apparent model failure was a valid, time-limited solution mislabelled as infeasible. The fix was in how results are read, not in the model.</span></li>
+      <li><strong>Match the examples to the problem</strong><span>Choosing worked examples that fit the problem variant turned a frequent failure into a stable success.</span></li>
+    </ul>
+
+    <h2>The result</h2>
+    <p class="callout">An LLM works best as a planner inside a checked workflow.</p>
+    <p>The project catalogued nine ways LLM-generated optimization fails and turned them into practical design rules. The same pattern now shapes how I build every AI system: the model does the judgement-heavy work, proven tools do the exact work, and nothing is trusted until it is checked.</p>
+  </div>
+
+  <nav class="next" aria-label="More work">
+    <a href="/work/brand-benchmark/"><small>Previous</small>← LLM Brand Recommendation Benchmark</a>
+    <a href="/work/polymarket-models/" style="text-align:right"><small>Next case study</small>Polymarket Market-Making &amp; Forecasting Models →</a>
+  </nav>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <span>© 2026 TSANG Cheuk Nam · Hong Kong</span>
+    <span><a href="mailto:rairu0811@gmail.com">rairu0811@gmail.com</a></span>
+  </div>
+</footer>
+
+</body>
+</html>

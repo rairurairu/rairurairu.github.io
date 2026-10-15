@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Budget-Based Microinsurance · Tony Tsang</title>
+<meta name="description" content="An AI-native redesign of insurance: customers choose the price and AI builds the cover. A winning hackathon concept, built into a complete system in four days.">
+<link rel="canonical" href="https://rairurairu.github.io/work/microinsurance/">
+<meta property="og:title" content="Budget-Based Microinsurance · Tony Tsang">
+<meta property="og:description" content="Customers choose the price, AI builds the cover. Winning hackathon concept, complete system in four days.">
+<meta name="theme-color" content="#0e6b5b">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="/">Tony Tsang</a>
+    <nav class="nav" aria-label="Main">
+      <a href="/#work">Work</a>
+      <a class="hide-sm" href="/#how">How I work</a>
+      <a class="hide-sm" href="/#contact">Contact</a>
+      <a class="nav-cv" href="/cv/TSANG_Cheuk_Nam_CV.pdf">CV</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <p class="crumb"><a href="/#work">← All work</a></p>
+
+  <div class="case-hero">
+    <p class="eyebrow">Case study · October 2026</p>
+    <h1>Budget-Based Microinsurance</h1>
+    <p class="lede">An AI-native redesign of insurance. Instead of “pick a cover, get a price”, customers pick the price and AI builds the protection, every month. The concept won a hackathon track; I then built the complete system in four days.</p>
+    <div class="facts">
+      <span><b>Role</b> Product owner and architect</span>
+      <span><b>Built with</b> Rust, TypeScript, Python, Claude</span>
+      <span><b>Award</b> Winner, “Reinventing Insurance for an AI-native World” track</span>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div><div class="n">4 days</div><div class="l">from the winning concept to a complete working system</div></div>
+    <div><div class="n">21 of 21</div><div class="l">pain points of traditional insurance answered</div></div>
+    <div><div class="n">1.6 s</div><div class="l">to settle automatic payouts for 1 million policies, against a 5-second target</div></div>
+  </div>
+
+  <div class="prose narrow">
+    <h2>The problem</h2>
+    <p>Small insurance fails on cost, not demand. Every policy needs per-customer work (proposal forms, explanations, prevention advice, claims handling), and at a few dollars a month that work costs more than the premium. So people who need small, flexible cover go without it.</p>
+    <p>I mapped 21 pain points of traditional insurance across insurers, partners and customers, and set one rule for the redesign: every one of them had to be answered.</p>
+
+    <h2>The idea</h2>
+    <p class="callout">Pick your price, AI builds the protection, every month.</p>
+    <p>Insurance sold the way people already buy AI plans: a fixed monthly price, starting at HK$40, with AI building a personal mix of cover around it and re-building it as life changes. Some covers pay out automatically on a published public trigger, with no claim form.</p>
+    <p>I also turned prevention into the product. AI sets each customer a personal prevention task for something coming up in their month and checks the photo they send back, and partners reward it from their spare capacity. Customers get value even in months with no loss, and partners turn unused capacity into paying visits.</p>
+
+    <h2>What I decided</h2>
+    <ul class="decisions">
+      <li><strong>Put AI where it pays</strong><span>I designed 9 AI components to take routine per-customer work off agents and claims handlers: proposal forms, plain-language explanations, prevention tasks, photo checks and claim assessment. That is what lets cover start at HK$40 a month.</span></li>
+      <li><strong>Decide where AI stops</strong><span>AI recommends. Fixed rules set every price and payout, small claims are paid straight through only when every guardrail passes, and only a person can refuse a claim.</span></li>
+      <li><strong>Make every AI component fail safe</strong><span>Each component returns a checked, structured answer with a saved fallback, and 36 evals, including deliberately bad model replies, prove it falls back safely. The evals run offline and against the live model.</span></li>
+      <li><strong>Use the smallest model that passes</strong><span>Each task is routed to the cheapest model that passes its evals: Claude Haiku by default, Sonnet where it needs to read images.</span></li>
+      <li><strong>Build fairness in</strong><span>The model never sees protected attributes, and the claims model never sees the amount claimed, so it cannot anchor on it.</span></li>
+      <li><strong>Own the product rules</strong><span>As product owner I set 34 of its 59 business rules. For example, there is no reward for not claiming, and a customer never pays for cover they cannot use.</span></li>
+    </ul>
+
+    <h2>The result</h2>
+    <p>A complete working system in four days: the customer app, partner and operations consoles, the economics an insurer needs to adopt it, and a second market (Taiwan) added as configuration, not code. About 330 automated tests check it across three languages, and it settles automatic payouts for 1 million policies in 1.6 seconds, against a 5-second target.</p>
+    <p>I set the method, decided who decides what (AI, rules or a person) and made the product decisions. Claude Code wrote most of the code under my direction.</p>
+
+    <h2>The hackathon</h2>
+    <p>At the Hong Kong AI Summit: BUILD ACROSS Hackathon (200+ participants), team Fable 6.7 won the “Reinventing Insurance for an AI-native World” track, sponsored by bolttech. I originated the winning concept and produced the 92-second pitch film by directing Claude Code. This system is my own complete build of that concept.</p>
+  </div>
+
+  <nav class="next" aria-label="More work">
+    <a href="/"><small>Back</small>All work</a>
+    <a href="/work/brand-benchmark/" style="text-align:right"><small>Next case study</small>LLM Brand Recommendation Benchmark →</a>
+  </nav>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <span>© 2026 TSANG Cheuk Nam · Hong Kong</span>
+    <span><a href="mailto:rairu0811@gmail.com">rairu0811@gmail.com</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
