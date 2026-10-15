@@ -3,7 +3,7 @@
 
 export const SITE = "https://rairurairu.github.io";
 export const CV = "/cv/TSANG_Cheuk_Nam_CV.pdf";
-export const EMAIL = "rairu0811@gmail.com";
+export const EMAIL = "cheuknam2004@gmail.com";
 export const GITHUB = "https://github.com/rairurairu";
 
 export const PERSON = {
