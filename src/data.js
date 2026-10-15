@@ -10,7 +10,7 @@ export const PERSON = {
   name: "Tony Tsang",
   legal: "TSANG Cheuk Nam",
   degree: "Industrial Engineering & Engineering Management + AI · HKUST",
-  formal: "BEng in Industrial Engineering & Engineering Management, Extended Major in Artificial Intelligence · HKUST · Sep 2022 – Dec 2026 (expected)",
+  formal: "BEng in Industrial Engineering & Engineering Management, Extended Major in Artificial Intelligence · HKUST · Sep 2022 – Dec 2026",
   availability: "Internship now · Full-time from January 2027",
   lede: "Final-year student. I design AI systems and build them with Claude Code and Codex, which write about 95% of the code.",
 };
@@ -27,10 +27,7 @@ export const COURSES = {
   IEDA3460: "Demand and Supply Analytics",
   IEDA3300: "Industrial Data Systems",
 };
-export const COURSE_ROWS = [
-  ["MATH4432", "IEDA4000I", "IEDA4000F", "IEDA3560", "IEDA3010"],
-  ["IEDA3250", "IEDA4130", "IEDA4000H", "IEDA3460", "IEDA3300"],
-];
+export const COURSE_ORDER = ["MATH4432", "IEDA4000I", "IEDA4000F", "IEDA3560", "IEDA3010", "IEDA3250", "IEDA4130", "IEDA4000H", "IEDA3460", "IEDA3300"];
 
 export const AWARD = {
   title: "Winner, “Reinventing Insurance for an AI-native World” track",

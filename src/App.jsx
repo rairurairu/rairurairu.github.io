@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import { Reveal, BlurWords, Count, Bars, Magnetic, TiltCard, Spotlight, ScrollProgress, useHideOnScroll, Marquee } from "./components/motion.jsx";
-import { PERSON, PROJECTS, MORE, AWARD, ROLES, SKILLS, COURSES, COURSE_ROWS, CV, EMAIL, GITHUB } from "./data.js";
+import { PERSON, PROJECTS, MORE, AWARD, ROLES, SKILLS, COURSES, COURSE_ORDER, CV, EMAIL, GITHUB } from "./data.js";
 
 const courseList = codes => codes.map(c => [c, COURSES[c]]);
 
@@ -122,8 +122,7 @@ function Home() {
           <Reveal as="h2">Coursework</Reveal>
           <Reveal as="p" className="formal">{PERSON.formal}</Reveal>
         </div>
-        <Marquee items={courseList(COURSE_ROWS[0])} duration={52} />
-        <Marquee items={courseList(COURSE_ROWS[1])} reverse duration={58} />
+        <Marquee items={courseList(COURSE_ORDER)} duration={70} />
       </section>
 
       <section id="skills" className="wrap sec">
