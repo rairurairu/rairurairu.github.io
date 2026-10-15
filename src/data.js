@@ -33,7 +33,7 @@ export const AWARD = {
   title: "Winner, “Reinventing Insurance for an AI-native World” track",
   event: "Hong Kong AI Summit: BUILD ACROSS Hackathon",
   meta: "Oct 2026 · 200+ participants · Track sponsored by bolttech",
-  role: "Team Fable 6.7 won the track with my original methodology for AI-native insurance: customers choose the monthly price and AI builds the cover. I mapped 21 pain points of traditional insurance across insurers, partners and customers and answered every one with 10 mechanisms in a monthly cycle, designed to serve customers that traditional insurance cannot reach at a profit. After the hackathon I built the complete system in four days.",
+  role: "Team Fable 6.7 won the track with my original methodology for AI-native insurance: customers choose the monthly price and AI builds the cover. I mapped 21 pain points of traditional insurance across insurers, partners and customers and answered every one with 10 mechanisms in a monthly cycle, designed to serve customers that traditional insurance cannot reach at a profit. I then built the complete system myself.",
   href: "/work/microinsurance/",
 };
 
@@ -58,14 +58,14 @@ export const PROJECTS = [
     title: "Budget-Based Microinsurance",
     meta: "Oct 2026 · Hackathon track winner",
     summary: "My original methodology that reinvents insurance: customers choose the monthly price and AI builds the cover, answering all 21 pain points of traditional insurance.",
-    stat: { n: 4, u: "days", l: "from the winning concept to a complete working system" },
+    stat: { n: 21, u: "of 21", l: "pain points of traditional insurance answered" },
     courses: ["IEDA3250", "IEDA3010"],
     tech: ["Rust", "TypeScript", "Python", "Claude"],
-    desc: "An AI-native redesign of insurance: customers choose the price and AI builds the cover. A winning hackathon concept, built into a complete system in four days.",
+    desc: "An AI-native redesign of insurance: customers choose the price and AI builds the cover. A hackathon-winning methodology, built into a complete working system.",
     facts: [["Role", "Product owner and architect"], ["Built with", "Rust, TypeScript, Python, Claude"], ["Award", "Winner, “Reinventing Insurance for an AI-native World” track"]],
     stats: [
-      { n: 4, u: "days", l: "from the winning concept to a complete working system" },
       { n: 21, u: "of 21", l: "pain points of traditional insurance answered" },
+      { n: 40, pre: "HK$", u: "/month", l: "starting price, possible because AI does the per-customer work" },
       { n: 1.6, d: 1, u: "s", l: "to settle automatic payouts for 1 million policies, against a 5-second target" },
     ],
     sections: [
@@ -86,11 +86,11 @@ export const PROJECTS = [
         ["Own the product rules", "As product owner I set 34 of its 59 business rules. For example, there is no reward for not claiming, and a customer never pays for cover they cannot use."],
       ] },
       { h: "Result", p: [
-        "A complete working system in four days: the customer app, partner and operations consoles, the economics an insurer needs to adopt it, and a second market (Taiwan) added as configuration, not code. About 330 automated tests check it across three languages, and it settles automatic payouts for 1 million policies in 1.6 seconds, against a 5-second target.",
+        "A complete working system: the customer app, partner and operations consoles, the economics an insurer needs to adopt it, and a second market (Taiwan) added as configuration, not code. About 330 automated tests check it across three languages, and it settles automatic payouts for 1 million policies in 1.6 seconds, against a 5-second target.",
         "I set the method, decided who decides what (AI, rules or a person) and made the product decisions. Claude Code wrote most of the code under my direction.",
       ] },
       { h: "The hackathon", p: [
-        "At the Hong Kong AI Summit: BUILD ACROSS Hackathon (200+ participants), team Fable 6.7 won the “Reinventing Insurance for an AI-native World” track, sponsored by bolttech, with my methodology. After the hackathon I built this complete system on my own in four days.",
+        "At the Hong Kong AI Summit: BUILD ACROSS Hackathon (200+ participants), team Fable 6.7 won the “Reinventing Insurance for an AI-native World” track, sponsored by bolttech, with my methodology. I then built this complete system myself.",
       ] },
     ],
   },
