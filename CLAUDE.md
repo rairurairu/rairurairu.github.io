@@ -11,5 +11,6 @@ All visible copy lives in `src/data.js`. It is application text, so the CV works
    numbers; lead with the hackathon win among 200+ participants.
 3. Before pushing: `npm run build`, then from `D:\cvbuilding` run
    `py tools/check.py --site D:\rairurairu.github.io\dist` (0 errors), and run the
-   `hiring-manager` agent on the changed pages for anything beyond a small edit.
+   `hiring-manager` agent (from `D:\cvbuilding\.claude\agents\hiring-manager.md`) on the changed
+   pages. Standing authorization (candidate, 15 Oct 2026): run it on every site change without asking.
 4. The microinsurance repo is private: describe it, never link it.

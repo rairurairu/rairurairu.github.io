@@ -112,8 +112,7 @@ function Home() {
         <div>
           <Reveal as="h2">About</Reveal>
           <Reveal as="p">I'm in my final year of Industrial Engineering &amp; Engineering Management + AI at HKUST, and my courses finish in December 2026.</Reveal>
-          <Reveal as="p">My coursework covers machine learning, optimization, stochastic models and simulation. My projects apply them with large language models: an insurance system, an LLM benchmark, an optimization study and quantitative research models.</Reveal>
-          <Reveal as="p">On each project I design the system, decide what AI, fixed rules and people each handle, and measure the result. AI coding agents write most of the code.</Reveal>
+          <Reveal as="p">Industrial engineering taught me to look at how work flows and where it breaks. On each project I decide what AI handles, what fixed rules handle and what only a person may decide, then I measure whether it worked.</Reveal>
         </div>
         <Reveal className="roles" delay={0.1}>
           <h3>Roles I'm looking for</h3>
