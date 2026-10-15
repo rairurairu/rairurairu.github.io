@@ -102,7 +102,7 @@ export const PROJECTS = [
     summary: "I designed an AI-run pipeline that measures which brands AI assistants recommend in each product category.",
     courses: ["IEDA4000I", "IEDA3300"],
     tech: ["Python", "SQLite", "LLM APIs"],
-    desc: "I designed an AI-run pipeline that measures which brands AI assistants recommend, and redesigned the method when the first approach stalled.",
+    desc: "I designed an AI-run pipeline that measures which brands AI assistants recommend and checks every answer against verified brand lists.",
     facts: [["Role", "System designer"], ["Built with", "Python, SQLite, LLM APIs"]],
     stats: [],
     sections: [
@@ -110,8 +110,8 @@ export const PROJECTS = [
         "More customers now ask AI assistants which brands to buy, so what those assistants recommend matters to every brand. Marketers call it AI visibility. Measuring it needs two things that are hard to get right: a verified map of which brands belong to which product category, and a fair way to test the assistant's answers against it.",
       ] },
       { h: "What I decided", list: [
-        ["Redesign when the first approach stalls", "My first approach started from well-known brands and merged several product catalogues, and it stalled. I redesigned the method to take its categories from a single product taxonomy. After the redesign, every category but one validated against verified brand lists."],
-        ["Fix the reference lists first","Most failures traced to incomplete reference brand lists, and completing the lists fixed them."],
+        ["Redesign when the first approach falls short", "My first approach started from well-known brands and merged several product catalogues, and it validated only one category. I redesigned the method to take its categories from a single product taxonomy, and every category but one then passed against verified brand lists."],
+        ["Fix the reference lists first", "Most failed checks came from incomplete reference lists that marked real brands as wrong, so I added verified brands to the lists."],
         ["Treat answer variance as part of the test", "The same question can score differently from one conversation to the next. Each test runs on a fixed version of the data in a fresh conversation, and every answer is stored with the reason it was matched."],
         ["Don't let AI grade itself", "AI answers count only as leads until they are checked against verified brand lists."],
       ] },
