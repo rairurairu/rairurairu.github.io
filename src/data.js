@@ -50,7 +50,7 @@ export const SKILLS = [
 
 export const MORE = [
   { t: "Self-Hosted Personal AI Agent", d: "An always-on personal AI agent that directs a team of coding agents, with rules drawn from real failures that stop agents building what nobody asked for." },
-  { t: "9UPPER Online", d: "A multilingual real-time web game I built with AI coding agents and grew through SEO, GEO and AEO to over 500 visitors a day. ChatGPT and Claude search recommend it.", href: "https://9upper-online.com", link: "9upper-online.com" },
+  { t: "9UPPER Online", d: "A multilingual real-time web game I built with AI coding agents and grew through SEO, GEO and AEO to over 500 visitors a day. It gets about 600 Google clicks a month and ranks in Google's top five on average, and ChatGPT and Claude search recommend it.", href: "https://9upper-online.com", link: "9upper-online.com" },
 ];
 
 // Case studies. `stat` drives the home card; `stats` the case-study header.
@@ -136,7 +136,7 @@ export const PROJECTS = [
       ] },
       { h: "What I led", list: [
         ["A fair benchmark across prompts and providers", "I designed the experiments and built the benchmark: five prompting strategies on two model providers, run on the same problems and checked the same way."],
-        ["An outside test to rule out overfitting", "A standard external benchmark confirmed the results held beyond the project's own test cases, with valid solutions in every trial."],
+        ["An outside test to rule out overfitting", "The planner approach found a valid routing solution in every trial, on average within 1% of a dedicated solver's best. On public benchmark tests it matched the solver, so the results held beyond the project's own test cases."],
         ["Let the AI plan, let the optimizer solve", "I had the model write a short plan for a standard optimizer to solve. It matched the solution quality of having the model write the whole program, at a fraction of the cost."],
         ["Find the real cause before blaming the model", "One apparent model failure was a valid, time-limited solution mislabelled as infeasible. Correcting how results are read fixed it."],
       ] },
