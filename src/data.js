@@ -88,7 +88,7 @@ export const PROJECTS = [
         ["Own the product rules", "As product owner I set 34 of its 59 business rules. For example, there is no reward for not claiming, and a customer never pays for cover they cannot use."],
       ] },
       { h: "Result", p: [
-        "A complete working system: the customer app, partner and operations consoles, the economics an insurer needs to adopt it, and a second market (Taiwan) added as configuration, not code. About 330 automated tests check it across three languages, and it settles automatic payouts for 1 million policies in 1.6 seconds, against a 5-second target.",
+        "A complete working system: the customer app, partner and operations consoles, the economics an insurer needs to adopt it, and a second market (Taiwan) added as configuration, not code. Every business rule is tied to an automated test, and it settles automatic payouts for 1 million policies in 1.6 seconds, against a 5-second target.",
         "I set the method, decided who decides what (AI, rules or a person) and made the product decisions. Claude Code wrote most of the code under my direction.",
       ] },
       { h: "The hackathon", p: [
