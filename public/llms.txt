@@ -5,12 +5,12 @@
 ## Case studies
 
 - [Budget-Based Microinsurance](https://rairurairu.github.io/work/microinsurance/): an AI-native redesign of insurance where customers choose the price and AI builds the cover; won its hackathon track among 200+ participants.
-- [LLM Brand Recommendation Benchmark](https://rairurairu.github.io/work/brand-benchmark/): which brands AI assistants recommend; 50 of 51 categories validated after a redesign; the first approach validated one.
-- [Using LLMs for Optimization](https://rairurairu.github.io/work/llm-optimization/): Final Year Project; letting the LLM plan cut AI cost 83% at the same solution quality.
+- [LLM Brand Recommendation Benchmark](https://rairurairu.github.io/work/brand-benchmark/): an AI-run pipeline he designed to measure which brands AI assistants recommend, with every answer checked against verified brand lists.
+- [Using LLMs for Optimization](https://rairurairu.github.io/work/llm-optimization/): Final Year Project as Experiment & Benchmarking Lead; showed an LLM works best when it plans and a proven optimizer solves.
 - [Polymarket Market-Making & Forecasting Models](https://rairurairu.github.io/work/polymarket-models/): AI-agent-driven quantitative research; forecasting models that beat the standard Elo rating.
 
 ## Other
 
 - [CV (PDF)](https://rairurairu.github.io/cv/TSANG_Cheuk_Nam_CV.pdf)
 - [GitHub](https://github.com/rairurairu)
-- [9UPPER Online](https://9upper-online.com)
+- [9UPPER Online](https://9upper-online.com): multilingual real-time web game with over 500 visitors a day

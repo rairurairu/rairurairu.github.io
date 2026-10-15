@@ -50,7 +50,7 @@ export const SKILLS = [
 
 export const MORE = [
   { t: "Self-Hosted Personal AI Agent", d: "An always-on personal AI agent that directs a team of coding agents, with rules drawn from real failures that stop agents building what nobody asked for." },
-  { t: "9UPPER Online", d: "Built a multilingual real-time game platform with AI coding agents and grew it through SEO, GEO and AEO until ChatGPT and Claude search recommend it.", href: "https://9upper-online.com", link: "9upper-online.com" },
+  { t: "9UPPER Online", d: "A multilingual real-time web game I built with AI coding agents and grew through SEO, GEO and AEO to over 500 visitors a day. ChatGPT and Claude search recommend it.", href: "https://9upper-online.com", link: "9upper-online.com" },
 ];
 
 // Case studies. `stat` drives the home card; `stats` the case-study header.
@@ -100,22 +100,18 @@ export const PROJECTS = [
     title: "LLM Brand Recommendation Benchmark",
     meta: "Sep 2026 · LLM evaluation",
     summary: "I designed an AI-run pipeline that measures which brands AI assistants recommend in each product category.",
-    stat: { n: 50, u: "of 51", l: "categories validated after the redesign; the first approach validated one" },
     courses: ["IEDA4000I", "IEDA3300"],
     tech: ["Python", "SQLite", "LLM APIs"],
-    desc: "I designed an AI-run pipeline that measures which brands AI assistants recommend. After my redesign, 50 of 51 categories validated.",
+    desc: "I designed an AI-run pipeline that measures which brands AI assistants recommend, and redesigned the method when the first approach stalled.",
     facts: [["Role", "System designer"], ["Built with", "Python, SQLite, LLM APIs"]],
-    stats: [
-      { n: 50, u: "of 51", l: "categories validated after the redesign; the first approach validated one" },
-    ],
-    viz: { rows: [["First approach", 3, "1", true], ["After redesign", 98, "50 of 51", false]], cap: "Categories validated against verified brand lists" },
+    stats: [],
     sections: [
       { h: "The problem", p: [
         "More customers now ask AI assistants which brands to buy, so what those assistants recommend matters to every brand. Marketers call it AI visibility. Measuring it needs two things that are hard to get right: a verified map of which brands belong to which product category, and a fair way to test the assistant's answers against it.",
-      ], viz: true },
+      ] },
       { h: "What I decided", list: [
-        ["Redesign when the first approach stalls", "My first approach, which started from well-known brands and merged several product catalogues, validated one category. I redesigned the method around a single product taxonomy, with categories taken from the taxonomy rather than from famous brands. After the redesign, 50 of 51 categories validated against verified brand lists."],
-        ["Fix the reference lists first","Most failures came from incomplete reference brand lists rather than AI error. Completing the lists fixed almost all of them."],
+        ["Redesign when the first approach stalls", "My first approach started from well-known brands and merged several product catalogues, and it stalled. I redesigned the method to take its categories from a single product taxonomy. After the redesign, every category but one validated against verified brand lists."],
+        ["Fix the reference lists first","Most failures traced to incomplete reference brand lists, and completing the lists fixed them."],
         ["Treat answer variance as part of the test", "The same question can score differently from one conversation to the next. Each test runs on a fixed version of the data in a fresh conversation, and every answer is stored with the reason it was matched."],
         ["Don't let AI grade itself", "AI answers count only as leads until they are checked against verified brand lists."],
       ] },
@@ -128,29 +124,24 @@ export const PROJECTS = [
     slug: "llm-optimization",
     title: "Using LLMs for Optimization",
     meta: "2026 · Final Year Project",
-    summary: "As Experiment & Benchmarking Lead, showed an LLM works best as a planner inside a checked workflow.",
-    stat: { n: 83, pre: "−", u: "%", l: "AI cost at the same solution quality" },
+    summary: "As Experiment & Benchmarking Lead, I showed an LLM works best as a planner inside a checked workflow.",
     courses: ["IEDA4000I", "IEDA3010"],
     tech: ["Python", "Pyomo", "DeepSeek", "MiniMax"],
-    desc: "Final Year Project, Experiment & Benchmarking Lead. Letting the LLM plan instead of writing the whole program cut AI cost 83% at the same solution quality.",
+    desc: "Final Year Project, Experiment & Benchmarking Lead. I showed that an LLM handles business optimization most cheaply and reliably when it plans and a proven optimizer does the exact work.",
     facts: [["Role", "Experiment & Benchmarking Lead"], ["Models", "DeepSeek, MiniMax"], ["Built with", "Python, Pyomo"]],
-    stats: [
-      { n: 83, pre: "−", u: "%", l: "AI cost at the same solution quality (0.72% vs 0.75% from optimal)" },
-      { n: 100, u: "%", l: "valid solutions in every trial on the benchmark suite" },
-    ],
-    viz: { rows: [["Writes the program", 100, "100%", true], ["Plans only", 17, "17%", false]], cap: "AI cost per solve, at the same solution quality (0.75% vs 0.72% from optimal)" },
+    stats: [],
     sections: [
       { h: "The problem", p: [
         "Business optimization problems such as delivery routing need exact answers. Asking an LLM to write the whole optimization program is expensive and unreliable: outputs get cut off, and some results look valid but are not.",
-      ], viz: true },
+      ] },
       { h: "What I led", list: [
         ["A fair benchmark across prompts and providers", "I designed the experiments and built the benchmark: five prompting strategies on two model providers, run on the same problems and checked the same way."],
         ["An outside test to rule out overfitting", "A standard external benchmark confirmed the results held beyond the project's own test cases, with valid solutions in every trial."],
-        ["Let the AI plan, let the optimizer solve", "Having the model write a short plan for a standard optimizer, instead of the whole program, cut AI cost 83% at the same solution quality."],
-        ["Find the real cause before blaming the model", "One apparent model failure was a valid, time-limited solution mislabelled as infeasible. The fix was in how results are read, not in the model."],
+        ["Let the AI plan, let the optimizer solve", "I had the model write a short plan for a standard optimizer to solve. It matched the solution quality of having the model write the whole program, at a fraction of the cost."],
+        ["Find the real cause before blaming the model", "One apparent model failure was a valid, time-limited solution mislabelled as infeasible. Correcting how results are read fixed it."],
       ] },
       { h: "Result", p: [
-        "The project catalogued how LLM-generated optimization fails and turned it into practical design rules: the model does the planning, a proven optimizer does the exact work, and every result is checked.",
+        "I catalogued how LLM-generated optimization fails and turned the failure classes into design rules the next project can build on.",
       ] },
     ],
   },

@@ -166,14 +166,14 @@ function Case({ slug }) {
       <Reveal className="facts" delay={0.4} blur={false}>
         {p.facts.map(([k, v]) => <div key={k}><dt>{k}</dt><dd>{v}</dd></div>)}
       </Reveal>
-      <div className={"stats n" + p.stats.length}>
+      {p.stats.length > 0 && <div className={"stats n" + p.stats.length}>
         {p.stats.map((s, j) => (
           <Reveal key={j} className="stat" delay={j * 0.08}>
             <span className="n">{s.text ? s.text : <Count n={s.n} d={s.d || 0} pre={s.pre || ""} />}<small>{s.u}</small></span>
             <span className="l">{s.l}</span>
           </Reveal>
         ))}
-      </div>
+      </div>}
 
       {p.sections.map(sec => (
         <section className="chapter" key={sec.h}>

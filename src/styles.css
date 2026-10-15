@@ -93,6 +93,7 @@ p { margin: 0 0 1em; }
 .card .n small, .stat .n small { font-size: .38em; color: var(--muted); letter-spacing: -0.02em; margin-left: .2em; }
 .card .l { color: var(--muted); font-size: 14px; }
 .card .foot-row { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-top: 10px; flex-wrap: wrap; }
+.card .s + .foot-row { margin-top: auto; }
 .card .go { font-size: 14px; font-weight: 500; color: var(--acc-2); }
 .card .go span { display: inline-block; transition: transform .3s; }
 .card:hover .go span { transform: translateX(4px); }
