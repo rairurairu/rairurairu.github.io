@@ -10,12 +10,14 @@
 <meta property="og:title" content="Tony Tsang (TSANG Cheuk Nam) · AI-native systems">
 <meta property="og:description" content="Redesigns traditional work to be AI-native and builds the AI systems behind it. Winner, “Reinventing Insurance for an AI-native World” track.">
 <meta property="og:url" content="https://rairurairu.github.io/">
-<meta name="theme-color" content="#0e6b5b">
+<meta name="theme-color" content="#0b0d1f">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
+<script>(function(){var r=document.documentElement;r.classList.add('js');try{var t=localStorage.getItem('theme');if(t)r.dataset.theme=t}catch(e){}})()</script>
+<script src="/assets/site.js" defer></script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -37,13 +39,14 @@
 <body>
 
 <header class="site-head">
-  <div class="wrap">
-    <a class="brand" href="/">Tony Tsang</a>
+  <div class="bar">
+    <a class="brand" href="/"><span class="mark">TT</span>Tony Tsang</a>
     <nav class="nav" aria-label="Main">
-      <a href="#work">Work</a>
-      <a class="hide-sm" href="#how">How I work</a>
+      <a class="hide-sm" href="#work">Work</a>
+      <a class="hide-sm" href="#about">About</a>
       <a class="hide-sm" href="#contact">Contact</a>
-      <a class="nav-cv" href="/cv/TSANG_Cheuk_Nam_CV.pdf">CV</a>
+      <button class="theme-btn" type="button" aria-label="Switch between light and dark theme"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18z" fill="currentColor"/></svg></button>
+      <a class="cta" href="/cv/TSANG_Cheuk_Nam_CV.pdf">CV</a>
     </nav>
   </div>
 </header>
@@ -51,79 +54,137 @@
 <main>
   <div class="wrap">
     <div class="hero">
-      <p class="eyebrow">TSANG Cheuk Nam · Hong Kong</p>
-      <h1>I redesign traditional work to be <em>AI-native</em>, and build the AI systems that run it.</h1>
-      <p class="lede">Final-year HKUST Industrial Engineering &amp; Engineering Management student (Extended Major in AI). I design the system and direct AI coding agents (Claude Code and Codex) that write about 95% of the code, which is how I delivered a complete insurance system in four days.</p>
-      <div class="actions">
-        <a class="btn btn-primary" href="/cv/TSANG_Cheuk_Nam_CV.pdf">Download CV (PDF)</a>
-        <a class="btn" href="mailto:rairu0811@gmail.com">rairu0811@gmail.com</a>
-        <span class="status">Internship now · full-time from January 2027</span>
-      </div>
-    </div>
-
-    <div class="award" id="award">
-      <div class="medal" aria-hidden="true">1</div>
       <div>
-        <p class="eyebrow">Winner · October 2026</p>
-        <h2>“Reinventing Insurance for an AI-native World” track</h2>
-        <p>Hong Kong AI Summit: BUILD ACROSS Hackathon, track sponsored by bolttech, 200+ participants. With team Fable 6.7, I originated the winning concept and produced the 92-second pitch film by directing Claude Code. Then I designed and built the complete system in four days. <a href="/work/microinsurance/">See how</a>.</p>
-      </div>
-    </div>
-  </div>
-
-  <section id="work">
-    <div class="wrap">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow">Selected work</p>
-          <h2>Results first, then the decisions behind them</h2>
+        <div class="hero-top">
+          <span class="pill"><span class="live"></span>Internship now · full-time from January 2027</span>
+          <span class="pill">HKUST · Hong Kong</span>
+        </div>
+        <h1>I redesign traditional work to be <span class="grad nw">AI-native</span>, and build the AI systems that run it.</h1>
+        <p class="lede">I'm TSANG Cheuk Nam (Tony), a final-year HKUST Industrial Engineering &amp; Engineering Management student (Extended Major in AI). I design the system and direct AI coding agents (Claude Code and Codex) that write about 95% of the code, which is how I delivered a complete insurance system in four days.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="/cv/TSANG_Cheuk_Nam_CV.pdf"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>Download CV</a>
+          <a class="btn" href="#work">See the work</a>
         </div>
       </div>
 
-      <div class="cards">
-        <article class="card featured">
-          <span class="meta">Oct 2026 · Winning hackathon concept</span>
-          <h3><a href="/work/microinsurance/">Budget-Based Microinsurance</a></h3>
-          <p>An AI-native redesign of insurance: customers choose the price and AI builds the cover, answering all 21 pain points of traditional insurance. Cover starts at HK$40 a month.</p>
-          <div class="stat">4 days</div>
-          <div class="stat-label">from the winning concept to a complete working system</div>
-          <span class="more">Read the case study →</span>
+      <div class="dmap reveal" aria-label="Who decides what in the microinsurance system">
+        <div class="dmap-head"><b>Who decides what</b><span class="dots3" aria-hidden="true"><i></i><i></i><i></i></span></div>
+        <div class="lane ai">
+          <div class="who">AI<small>recommends</small></div>
+          <div class="jobs"><span>Proposal forms</span><span>Plain-language explanations</span><span>Prevention tasks</span><span>Photo checks</span><span>Claim assessment</span></div>
+        </div>
+        <div class="lane rules">
+          <div class="who">Rules<small>decide money</small></div>
+          <div class="jobs"><span>Every price</span><span>Every payout</span></div>
+        </div>
+        <div class="lane people">
+          <div class="who">People<small>final say</small></div>
+          <div class="jobs"><span>Only a person can refuse a claim</span></div>
+        </div>
+        <div class="dmap-foot"><span>Budget-Based Microinsurance · cover from HK$40 a month</span><a href="/work/microinsurance/">How it works →</a></div>
+      </div>
+    </div>
+
+    <div class="proof reveal">
+      <div><div class="n rules">4 days</div><div class="l">from a winning concept to a complete working system</div></div>
+      <div><div class="n data">50 of 51</div><div class="l">categories validated after I redesigned a failing method</div></div>
+      <div><div class="n ai">−83%</div><div class="l">AI cost at the same solution quality</div></div>
+      <div><div class="n people">200+</div><div class="l">hackathon participants; my concept won its track</div></div>
+    </div>
+  </div>
+
+  <section id="award">
+    <div class="wrap">
+      <div class="award reveal">
+        <div class="trophy" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4z"/><path d="M17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"/></svg></div>
+        <div>
+          <p class="kicker">Winner · October 2026</p>
+          <h2>“Reinventing Insurance for an AI-native World” track</h2>
+          <p>Hong Kong AI Summit: BUILD ACROSS Hackathon, track sponsored by bolttech, 200+ participants. With team Fable 6.7, I originated the winning concept and produced the 92-second pitch film by directing Claude Code. Then I designed and built the complete system in four days. <a href="/work/microinsurance/">See how →</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="kicker">Selected work</p>
+          <h2>Results first, then<br>the decisions behind them.</h2>
+        </div>
+        <p>Every project below ends in a number you can compare against something, and a case study on the calls I made to get there.</p>
+      </div>
+
+      <div class="bento">
+        <article class="tile wide reveal" style="--accent: var(--mint)">
+          <span class="glow" aria-hidden="true"></span>
+          <div style="display:flex;flex-direction:column;gap:14px">
+            <span class="meta">Oct 2026 · Winning hackathon concept</span>
+            <h3><a href="/work/microinsurance/">Budget-Based Microinsurance</a></h3>
+            <p>An AI-native redesign of insurance: customers choose the price and AI builds the cover, answering all 21 pain points of traditional insurance.</p>
+            <div><div class="big">4 days</div><small>from the winning concept to a complete working system</small></div>
+            <ul class="tags"><li>Rust</li><li>TypeScript</li><li>Python</li><li>Claude</li></ul>
+            <span class="go">Read the case study <span>→</span></span>
+          </div>
+          <div class="split">
+            <div><span>Takes routine per-customer work off agents and claims handlers</span><b class="ai">AI</b></div>
+            <div><span>Sets every price and every payout</span><b class="rules">Rules</b></div>
+            <div><span>Only a person can refuse a claim</span><b class="people">People</b></div>
+          </div>
         </article>
 
-        <article class="card">
+        <article class="tile reveal" style="--accent: var(--sky)">
+          <span class="glow" aria-hidden="true"></span>
           <span class="meta">Sep 2026 · Built for HKUST's AI Observatory</span>
           <h3><a href="/work/brand-benchmark/">LLM Brand Recommendation Benchmark</a></h3>
-          <p>AI-native market research: an AI-run benchmark of which brands AI assistants recommend in each product category.</p>
-          <div class="stat">50 of 51</div>
-          <div class="stat-label">categories validated within two days of redesigning the method; the first approach validated one</div>
-          <span class="more">Read the case study →</span>
+          <p>AI-native market research: which brands do AI assistants recommend in each product category?</p>
+          <div class="viz">
+            <div class="viz-row"><span class="lab">First approach</span><span class="track"><span class="bar dim" style="--w:3%;display:block"></span></span><span class="val">1</span></div>
+            <div class="viz-row"><span class="lab">After redesign</span><span class="track"><span class="bar" style="--w:98%;display:block"></span></span><span class="val">50 of 51</span></div>
+            <p class="cap">Categories validated against verified brand lists, within two days of the redesign</p>
+          </div>
+          <ul class="tags"><li>Python</li><li>SQLite</li><li>LLM APIs</li></ul>
+          <span class="go">Read the case study <span>→</span></span>
         </article>
 
-        <article class="card">
+        <article class="tile reveal" style="--accent: var(--violet)">
+          <span class="glow" aria-hidden="true"></span>
           <span class="meta">Completed 2026 · IEDA Final Year Project</span>
           <h3><a href="/work/llm-optimization/">Using LLMs for Optimization</a></h3>
           <p>As Experiment &amp; Benchmarking Lead, showed an LLM works best as a planner inside a checked workflow.</p>
-          <div class="stat">−83%</div>
-          <div class="stat-label">AI cost at the same solution quality</div>
-          <span class="more">Read the case study →</span>
+          <div class="viz">
+            <div class="viz-row"><span class="lab">Writes the program</span><span class="track"><span class="bar dim" style="--w:100%;display:block"></span></span><span class="val">100%</span></div>
+            <div class="viz-row"><span class="lab">Plans only</span><span class="track"><span class="bar" style="--w:17%;display:block"></span></span><span class="val">17%</span></div>
+            <p class="cap">AI cost per solve, at the same solution quality (0.75% vs 0.72% from optimal)</p>
+          </div>
+          <ul class="tags"><li>Python</li><li>Pyomo</li><li>DeepSeek</li><li>MiniMax</li></ul>
+          <span class="go">Read the case study <span>→</span></span>
         </article>
 
-        <article class="card featured">
-          <span class="meta">Aug 2026 – Present · AI-agent-driven quantitative research</span>
-          <h3><a href="/work/polymarket-models/">Polymarket Market-Making &amp; Forecasting Models</a></h3>
-          <p>Forecasting and market-making research where AI agents do the heavy lifting and the data decides what continues.</p>
-          <div class="stat">3,504</div>
-          <div class="stat-label">held-out matches on which the forecasting models beat the standard Elo rating</div>
-          <span class="more">Read the case study →</span>
+        <article class="tile wide reveal" style="--accent: var(--coral)">
+          <span class="glow" aria-hidden="true"></span>
+          <div style="display:flex;flex-direction:column;gap:14px">
+            <span class="meta">Aug 2026 – Present · AI-agent-driven quantitative research</span>
+            <h3><a href="/work/polymarket-models/">Polymarket Market-Making &amp; Forecasting Models</a></h3>
+            <p>Forecasting models that beat the standard Elo rating on 3,504 held-out matches, then market-making research where the data decides what continues.</p>
+            <ul class="tags"><li>Python</li><li>Forecasting</li><li>Market microstructure</li></ul>
+            <span class="go">Read the case study <span>→</span></span>
+          </div>
+          <div class="viz">
+            <div class="viz-row"><span class="lab">Sell quotes hit</span><span class="track"><span class="bar" style="--w:100%;display:block"></span></span><span class="val">4.5×</span></div>
+            <div class="viz-row"><span class="lab">Buy quotes hit</span><span class="track"><span class="bar dim" style="--w:22%;display:block"></span></span><span class="val">1×</span></div>
+            <p class="cap">How often prices hit each side, across 777,588 replayed orders: the risk to price before quoting</p>
+          </div>
         </article>
       </div>
 
       <div class="also">
-        <div>
+        <div class="reveal">
           <h3>Self-Hosted Personal AI Agent</h3>
           <p>Runs a personal AI agent 24/7 on home hardware and a team of coding agents, with eight rules, each from a real failure, that stop agents building what nobody asked for.</p>
         </div>
-        <div>
+        <div class="reveal">
           <h3>9UPPER Online</h3>
           <p>Built a multilingual real-time game platform with AI coding agents and grew it through SEO, GEO and AEO to 1,789 Google clicks in three months; ChatGPT and Claude search now recommend it. <a href="https://9upper-online.com">9upper-online.com</a></p>
         </div>
@@ -131,24 +192,49 @@
     </div>
   </section>
 
-  <section id="how" class="rule">
+  <section id="about">
+    <div class="wrap about">
+      <div class="reveal">
+        <p class="kicker">About</p>
+        <h2>Trained to redesign how work gets done. Now I build it with AI.</h2>
+        <p style="margin-top:24px">I study Industrial Engineering &amp; Engineering Management at HKUST, with an Extended Major in AI. Industrial engineering taught me to take a process apart and rebuild it; AI changes what the rebuilt version can be.</p>
+        <p>I start from the work itself. I decide what AI should do, what fixed rules and people should keep, and how the gain will be proved. Then I build the whole system and measure it against something a manager can judge.</p>
+        <p><strong>The result I'm proudest of:</strong> taking an insurance concept from a winning hackathon pitch to a complete working system in four days.</p>
+      </div>
+      <div class="roles reveal">
+        <h3>Roles I'm looking for</h3>
+        <ul>
+          <li>AI engineer · AI application engineer</li>
+          <li>AI product and solutions</li>
+          <li>AI-native transformation</li>
+          <li>AI evaluation and research</li>
+        </ul>
+        <div class="when">Internship now · full-time from January 2027 · Hong Kong<br>Cantonese (native), English (fluent), Mandarin (fluent)</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how">
     <div class="wrap">
-      <div class="section-head">
+      <div class="sec-head">
         <div>
-          <p class="eyebrow">How I work</p>
-          <h2>Three calls I make on every project</h2>
+          <p class="kicker">How I work</p>
+          <h2>Three calls I make on every project.</h2>
         </div>
       </div>
       <div class="principles">
-        <div>
+        <div class="reveal" style="--c: var(--violet)">
+          <span class="num">01</span>
           <h3>Put AI where it pays</h3>
           <p>AI takes the per-customer work nobody can afford to do by hand. Fixed rules set every price and payout, and a person makes the calls that need one.</p>
         </div>
-        <div>
+        <div class="reveal" style="--c: var(--sky)">
+          <span class="num">02</span>
           <h3>Fix the ground truth before blaming the model</h3>
           <p>In my brand benchmark, most failures came from incomplete reference data, not AI error. Fixing the data turned 13 of 14 failures into passes.</p>
         </div>
-        <div>
+        <div class="reveal" style="--c: var(--sun)">
+          <span class="num">03</span>
           <h3>Let the data decide what continues</h3>
           <p>I retired a forecasting signal once 1,444 simulated decisions showed no edge, before any money was at risk.</p>
         </div>
@@ -156,33 +242,34 @@
     </div>
   </section>
 
-  <section id="skills" class="rule">
+  <section id="skills">
     <div class="wrap">
-      <div class="section-head">
+      <div class="sec-head">
         <div>
-          <p class="eyebrow">Skills</p>
-          <h2>What I bring to a team</h2>
+          <p class="kicker">Skills</p>
+          <h2>What I bring to a team.</h2>
         </div>
       </div>
-      <dl class="skills">
-        <dt>AI application design</dt><dd>LLM components, evals and guardrails, structured outputs, model routing, human-in-the-loop</dd>
-        <dt>AI-native transformation</dt><dd>Process redesign, deciding what AI, rules or people handle, cost and quality measurement</dd>
-        <dt>Agentic development</dt><dd>Claude Code, Codex, multi-agent orchestration, harness and context engineering, spec-driven development</dd>
-        <dt>Software</dt><dd>Python, TypeScript, React, Rust, PostgreSQL, REST APIs, Docker, Linux, Git</dd>
-        <dt>Languages</dt><dd>Cantonese (native), English (fluent), Mandarin (fluent)</dd>
-      </dl>
+      <div class="skillgrid">
+        <div class="reveal"><h3>AI application design</h3><ul class="tags"><li>LLM components</li><li>Evals and guardrails</li><li>Structured outputs</li><li>Model routing</li><li>Human-in-the-loop</li></ul></div>
+        <div class="reveal"><h3>AI-native transformation</h3><ul class="tags"><li>Process redesign</li><li>Deciding what AI, rules or people handle</li><li>Cost and quality measurement</li></ul></div>
+        <div class="reveal"><h3>Agentic development</h3><ul class="tags"><li>Claude Code</li><li>Codex</li><li>Multi-agent orchestration</li><li>Harness engineering</li><li>Context engineering</li><li>Spec-driven development</li></ul></div>
+        <div class="reveal"><h3>Software</h3><ul class="tags"><li>Python</li><li>TypeScript</li><li>React</li><li>Rust</li><li>PostgreSQL</li><li>REST APIs</li><li>Docker</li><li>Linux</li><li>Git</li></ul></div>
+      </div>
     </div>
   </section>
 
-  <section id="contact" class="rule contact">
+  <section id="contact">
     <div class="wrap">
-      <p class="eyebrow">Contact</p>
-      <h2>Looking for someone to make your work AI-native? Let's talk.</h2>
-      <p class="lede" style="margin-top:16px">Available for internships now and full-time from January 2027, in Hong Kong.</p>
-      <div class="actions">
-        <a class="btn btn-primary" href="mailto:rairu0811@gmail.com">Email me</a>
-        <a class="btn" href="/cv/TSANG_Cheuk_Nam_CV.pdf">Download CV</a>
-        <a class="btn" href="https://github.com/rairurairu">GitHub</a>
+      <div class="contact-card reveal">
+        <p class="kicker">Contact</p>
+        <h2>Looking for someone to make your work <span class="grad">AI-native?</span></h2>
+        <p class="lede">Available for internships now and full-time from January 2027, in Hong Kong.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="mailto:rairu0811@gmail.com">rairu0811@gmail.com</a>
+          <a class="btn" href="/cv/TSANG_Cheuk_Nam_CV.pdf">Download CV</a>
+          <a class="btn" href="https://github.com/rairurairu">GitHub</a>
+        </div>
       </div>
     </div>
   </section>
@@ -191,7 +278,7 @@
 <footer class="site-foot">
   <div class="wrap">
     <span>© 2026 TSANG Cheuk Nam · Hong Kong</span>
-    <span><a href="https://github.com/rairurairu">github.com/rairurairu</a></span>
+    <span><a href="https://github.com/rairurairu">GitHub</a> · <a href="mailto:rairu0811@gmail.com">Email</a> · <a href="/cv/TSANG_Cheuk_Nam_CV.pdf">CV</a></span>
   </div>
 </footer>
 
