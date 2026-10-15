@@ -33,7 +33,7 @@ export const AWARD = {
   title: "Winner, “Reinventing Insurance for an AI-native World” track",
   event: "Hong Kong AI Summit: BUILD ACROSS Hackathon",
   meta: "Oct 2026 · 200+ participants · Track sponsored by bolttech",
-  role: "With team Fable 6.7, I originated the winning concept and produced the 92-second pitch film by directing Claude Code. I then built the complete system in four days.",
+  role: "Team Fable 6.7 won the track with my original methodology for AI-native insurance: customers choose the monthly price and AI builds the cover. I mapped 21 pain points of traditional insurance across insurers, partners and customers and answered every one with 10 mechanisms in a monthly cycle, designed to serve customers that traditional insurance cannot reach at a profit. After the hackathon I built the complete system in four days.",
   href: "/work/microinsurance/",
 };
 
@@ -57,7 +57,7 @@ export const PROJECTS = [
     slug: "microinsurance",
     title: "Budget-Based Microinsurance",
     meta: "Oct 2026 · Hackathon track winner",
-    summary: "Insurance redesigned so customers choose the monthly price and AI builds the cover, answering all 21 pain points of traditional insurance.",
+    summary: "My original methodology that reinvents insurance: customers choose the monthly price and AI builds the cover, answering all 21 pain points of traditional insurance.",
     stat: { n: 4, u: "days", l: "from the winning concept to a complete working system" },
     courses: ["IEDA3250", "IEDA3010"],
     tech: ["Rust", "TypeScript", "Python", "Claude"],
@@ -70,8 +70,8 @@ export const PROJECTS = [
     ],
     sections: [
       { h: "The problem", p: [
-        "Small insurance fails on cost, not demand. Every policy needs per-customer work (proposal forms, explanations, prevention advice, claims handling), and at a few dollars a month that work costs more than the premium. So people who need small, flexible cover go without it.",
-        "I mapped 21 pain points of traditional insurance across insurers, partners and customers, and set one rule for the redesign: every one of them had to be answered.",
+        "Small insurance fails on cost, not demand. Every policy needs per-customer work (proposal forms, explanations, prevention advice, claims handling), and at a few dollars a month that work costs more than the premium. So the customers who need small, flexible cover most are the ones traditional insurance cannot serve.",
+        "I mapped 21 pain points of traditional insurance across insurers, partners and customers, and set one rule for the redesign: every one of them had to be answered. My methodology answers all 21 with 10 mechanisms that run as a monthly cycle, from understanding the customer to cover, prevention, verification, reward, recovery and learning.",
       ] },
       { h: "The product", p: [
         "Instead of picking a cover and getting a price, the customer picks a fixed monthly price, starting at HK$40, and AI builds a personal mix of cover around it, re-building it as life changes. Some covers pay out automatically on a published public trigger, with no claim form.",
@@ -90,7 +90,7 @@ export const PROJECTS = [
         "I set the method, decided who decides what (AI, rules or a person) and made the product decisions. Claude Code wrote most of the code under my direction.",
       ] },
       { h: "The hackathon", p: [
-        "At the Hong Kong AI Summit: BUILD ACROSS Hackathon (200+ participants), team Fable 6.7 won the “Reinventing Insurance for an AI-native World” track, sponsored by bolttech. I originated the winning concept and produced the 92-second pitch film by directing Claude Code. This system is my own complete build of that concept.",
+        "At the Hong Kong AI Summit: BUILD ACROSS Hackathon (200+ participants), team Fable 6.7 won the “Reinventing Insurance for an AI-native World” track, sponsored by bolttech, with my methodology. After the hackathon I built this complete system on my own in four days.",
       ] },
     ],
   },
