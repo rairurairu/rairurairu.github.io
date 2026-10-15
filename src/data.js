@@ -98,13 +98,13 @@ export const PROJECTS = [
   {
     slug: "brand-benchmark",
     title: "LLM Brand Recommendation Benchmark",
-    meta: "Sep 2026 · HKUST AI Observatory",
-    summary: "An AI-run benchmark of which brands AI assistants recommend in each product category.",
+    meta: "Sep 2026 · LLM evaluation",
+    summary: "I designed an AI-run pipeline that measures which brands AI assistants recommend in each product category.",
     stat: { n: 50, u: "of 51", l: "categories validated after the redesign; the first approach validated one" },
     courses: ["IEDA4000I", "IEDA3300"],
     tech: ["Python", "SQLite", "LLM APIs"],
-    desc: "An AI-run benchmark of which brands AI assistants recommend. After a redesign, 50 of 51 categories validated.",
-    facts: [["Role", "Researcher and system designer"], ["For", "HKUST's AI Observatory"], ["Built with", "Python, SQLite, LLM APIs"]],
+    desc: "I designed an AI-run pipeline that measures which brands AI assistants recommend. After my redesign, 50 of 51 categories validated.",
+    facts: [["Role", "System designer"], ["Built with", "Python, SQLite, LLM APIs"]],
     stats: [
       { n: 50, u: "of 51", l: "categories validated after the redesign; the first approach validated one" },
     ],
@@ -115,7 +115,7 @@ export const PROJECTS = [
       ], viz: true },
       { h: "What I decided", list: [
         ["Redesign when the first approach stalls", "My first approach, which started from well-known brands and merged several product catalogues, validated one category. I redesigned the method around a single product taxonomy, with categories taken from the taxonomy rather than from famous brands. After the redesign, 50 of 51 categories validated against verified brand lists."],
-        ["Fix the ground truth, not the model", "Most failures came from incomplete reference brand lists rather than AI error. Completing the lists fixed almost all of them."],
+        ["Fix the reference lists first","Most failures came from incomplete reference brand lists rather than AI error. Completing the lists fixed almost all of them."],
         ["Treat answer variance as part of the test", "The same question can score differently from one conversation to the next. Each test runs on a fixed version of the data in a fresh conversation, and every answer is stored with the reason it was matched."],
         ["Don't let AI grade itself", "AI answers count only as leads until they are checked against verified brand lists."],
       ] },
