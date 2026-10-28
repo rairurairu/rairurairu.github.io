@@ -164,7 +164,7 @@ function Case({ slug }) {
       <BlurWords text={p.title} as="h1" delay={0.05} />
       <Reveal as="p" className="lede" delay={0.3}>{p.summary}</Reveal>
       <Reveal className="facts" delay={0.4} blur={false}>
-        {p.facts.map(([k, v]) => <div key={k}><dt>{k}</dt><dd>{v}</dd></div>)}
+        {p.facts.map(([k, v]) => <div key={k}><dt>{k}</dt><dd>{Array.isArray(v) ? <a href={v[1]}>{v[0]}</a> : v}</dd></div>)}
       </Reveal>
       {p.stats.length > 0 && <div className={"stats n" + p.stats.length}>
         {p.stats.map((s, j) => (

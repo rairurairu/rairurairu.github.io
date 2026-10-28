@@ -42,7 +42,7 @@ export const AWARD = {
 export const ROLES = ["AI application engineer", "AI product and solutions", "AI-native transformation"];
 
 export const SKILLS = [
-  ["AI & LLMs", ["Evals and guardrails", "Structured outputs", "Model routing", "Human-in-the-loop", "Harness engineering", "Context engineering"]],
+  ["AI & LLMs", ["Evals and guardrails", "Structured outputs", "Model routing", "MCP servers", "Human-in-the-loop", "Harness engineering", "Context engineering"]],
   ["Agentic coding", ["Claude Code", "Codex", "Multi-agent orchestration", "Spec-driven development"]],
   ["Software", ["Python", "TypeScript", "React", "Rust", "PostgreSQL", "REST APIs", "Docker", "Linux"]],
   ["Languages", ["Cantonese (native)", "English (fluent)", "Mandarin (fluent)"]],
@@ -149,6 +149,34 @@ export const PROJECTS = [
       ] },
       { h: "Result", p: [
         "I catalogued the ways LLM-generated optimization programs fail and turned them into design rules.",
+      ] },
+    ],
+  },
+  {
+    slug: "pairup",
+    title: "PairUp",
+    meta: "Oct 2026 · AI agents · MCP server",
+    summary: "A peer-to-peer marketplace that AI agents run for people. I decided agents should not haggle: an open-source pricing rule settles every deal, so no model can be talked into revealing a limit.",
+    courses: ["IEDA4000I", "MATH4432"],
+    tech: ["MCP", "TypeScript", "Rust", "AWS"],
+    desc: "A peer-to-peer marketplace that AI agents run for people, built as a Model Context Protocol (MCP) server any compatible agent can connect to and live on AWS with Amazon Bedrock. An open-source pricing rule I designed settles every deal inside both people's private limits.",
+    // Hiring-manager review, 28 Oct 2026: link only pairing-core until the PairUp repo README drops its Alexa+ and "prototype" wording.
+    facts: [["Role", "Product owner and architect"], ["Built with", "TypeScript, Rust, PostgreSQL, Amazon Bedrock"], ["Pricing rule", ["pairing-core on GitHub", "https://github.com/rairurairu/pairing-core"]]],
+    // No stat card until there is a measured result (the "Zero model calls" card was true by construction).
+    stats: [],
+    sections: [
+      { h: "The problem", p: [
+        "Buying from or hiring another person still runs on manual work: writing a listing, searching, haggling in chat and arranging a hand-off, often on a platform that adds its own fees.",
+        "I redesigned that work for AI agents acting for each person. A person's standing need is as easy to find as a seller's listing, so matching starts from either side, for goods and for services such as errands and one-time jobs. The agent finds the match, settles the price and asks both people for a final yes.",
+      ] },
+      { h: "What I decided", list: [
+        ["Agents do not haggle", "Turn-by-turn bargaining costs model calls and seconds on every deal, and a model can be talked into revealing a limit. One open pricing rule settles every deal inside both people's private limits, and the seller's minimum never shows through the price. A buyer gets one offer below the asking price per listing, so asking again cannot find the minimum. I published the rule as an open-source library."],
+        ["Let the system learn, with a control group", "A nightly model learns which matches people accept. It replaces the current ranking only if it does better on newer outcomes; one request in ten stays on the old ranking as a live A/B control, and the new ranking rolls back automatically if it falls behind."],
+        ["Search by meaning, inside hard limits", "Semantic and keyword search find matches by meaning, but only among posts that already fit on price, condition and schedule, which fixed rules check first."],
+        ["Agents are the first users", "PairUp is a Model Context Protocol (MCP) server, so any compatible AI agent can connect and use it without a custom integration. It ships with an agent skill and a machine-readable guide, so an agent learns the marketplace from the server itself."],
+      ] },
+      { h: "Result", p: [
+        "A complete working service, live on AWS with Amazon Bedrock. Its source and its pricing rule are published as open-source code.",
       ] },
     ],
   },
