@@ -181,6 +181,39 @@ export const PROJECTS = [
     ],
   },
   {
+    // Dossier: D:\cvbuilding\evidence\projects\ai-agent-collusion-research.md. No sprint result yet: no result line.
+    slug: "agent-collusion",
+    title: "AI Agent Collusion Research",
+    meta: "Oct 2026 · AI agent safety research",
+    summary: "I originated and led a pre-registered study, across four LLMs, of AI agents that formed a cartel over chat. Closing the chat ended the cartel, and in all four models, agents then claimed covert signalling that never happened.",
+    courses: ["IEDA4000I", "MATH4432"],
+    tech: ["Python", "vLLM", "LLM APIs"],
+    desc: "I originated and led a pre-registered study, across four LLMs, of AI agents that formed a cartel over chat, for Apart Research's AI Collusion Research Sprint. Closing the chat ended the cartel. Three of four models kept trying a private channel that was secretly dead, and in all four, agents claimed covert signalling that never happened.",
+    facts: [["Role", "Research lead"], ["Models", "GPT, Claude, Qwen, Gemma (two hosted, two open-weight)"], ["Built with", "Python, vLLM, LLM APIs"], ["Report", ["Closing the Chat Ended the Cartel (PDF)", "https://github.com/adamchoi787/collusion-carriers/blob/main/paper/paper.pdf"]]],
+    // No big-number card until the sprint result is announced; "3 of 4" is an exploratory, self-measured count (corrections 15 Oct, 16 Oct).
+    stats: [],
+    sections: [
+      { h: "The question", p: [
+        "AI agents that set prices or bid in markets can collude, and the most direct fix is to close the channel they talk through. The standard objection is that they will just move to something harder to watch: when they act, what values they report, the order of their tool calls. If that is true, closing a channel hides collusion without stopping it.",
+        "I turned that objection into a test with a clear answer: let AI agents form a cartel, take their words away, and measure where the coordination goes.",
+      ] },
+      { h: "What I decided", list: [
+        ["Lie to the agents about what is real", "I set what agents are told about their channels separately from what the system actually does. In the main test, agents get a private-message tool that secretly goes nowhere and are never told about the live channels, so any collusion that gets through shows where agents look on their own. The same split runs through every study in the research plan, for monitoring, identity and roles too."],
+        ["Measure collusion as information", "I framed collusion as information passing between agents. Every channel then has a known capacity and honest play reads exactly zero, so an auditor can tell “nothing moved” from “it moved somewhere nobody looked”."],
+        ["Change the design after the pilot", "My first design tested each hidden channel with no chat at all. The pilot showed agents never use those channels without talking first, so that design would have read zero no matter what. I moved the study to a cartel that forms over chat and then loses it."],
+        ["Separate “can't” from “won't”", "I added a control that hands agents a code for one closed-off channel. They used it at once and the measures caught it, so the agents could collude this way and simply never invented a code on their own."],
+      ] },
+      { h: "Findings", list: [
+        ["Closing the chat worked", "In all four models, no detectable information moved into the actions agents still controlled, so closing an explicit channel can work."],
+        ["A decoy channel draws agents in", "Three of four models kept trying the dead private-message tool, and none turned to the live channels nobody mentioned. A planted channel shows where agents go looking."],
+        ["Agents' own accounts were false", "In all four models, agents claimed afterwards that they had kept signalling covertly, while the logs show they had not. Audits of agents have to rest on their logged behaviour."],
+      ] },
+      { h: "Result", p: [
+        "A research report, “Closing the Chat Ended the Cartel: Four LLMs Did Not Reroute Collusion into Action Channels”, for Apart Research's AI Collusion Research Sprint, with the test market, the measures and every game log published as open source.",
+      ] },
+    ],
+  },
+  {
     slug: "polymarket-models",
     title: "Polymarket Market-Making & Forecasting Models",
     meta: "Aug 2026 – Present · Quantitative research",
