@@ -160,8 +160,8 @@ export const PROJECTS = [
     courses: ["IEDA4000I", "MATH4432"],
     tech: ["MCP", "TypeScript", "Rust", "AWS"],
     desc: "A peer-to-peer marketplace that AI agents run for people, built as a Model Context Protocol (MCP) server any compatible agent can connect to and live on AWS with Amazon Bedrock. An open-source pricing rule I designed settles every deal inside both people's private limits.",
-    // Hiring-manager review, 28 Oct 2026: link only pairing-core until the PairUp repo README drops its Alexa+ and "prototype" wording.
-    facts: [["Role", "Product owner and architect"], ["Built with", "TypeScript, Rust, PostgreSQL, Amazon Bedrock"], ["Pricing rule", ["pairing-core on GitHub", "https://github.com/rairurairu/pairing-core"]]],
+    // PairUp repo README reframed 28 Oct 2026 (no Alexa+ lead, no "prototype"), so both repos are linked.
+    facts: [["Role", "Product owner and architect"], ["Built with", "TypeScript, Rust, PostgreSQL, Amazon Bedrock"], ["Source code", ["PairUp on GitHub", "https://github.com/rairurairu/amazon-pair-up"]], ["Pricing rule", ["pairing-core on GitHub", "https://github.com/rairurairu/pairing-core"]]],
     // No stat card until there is a measured result (the "Zero model calls" card was true by construction).
     stats: [],
     sections: [
