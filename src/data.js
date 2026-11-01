@@ -35,7 +35,7 @@ export const AWARD = {
   event: "Hong Kong AI Summit: BUILD ACROSS Hackathon",
   meta: "Oct 2026 · Track sponsored by bolttech",
   participants: 200,
-  role: "Team Fable 6.7 won the track with my original methodology. I mapped the long-standing pain points of traditional insurance and answered them with AI-native insurance: customers choose the monthly price and AI builds the cover, so insurance can reach the customers traditional insurers cannot serve at a profit. I then built the complete system.",
+  role: "My methodology won the track. I mapped the long-standing pain points of traditional insurance and answered them with AI-native insurance: customers choose the monthly price and AI builds the cover, so insurance can reach the customers traditional insurers cannot serve at a profit. I then built the complete system.",
   href: "/work/microinsurance/",
 };
 
@@ -93,7 +93,7 @@ export const PROJECTS = [
         "A complete working system: the customer app, partner and operations consoles, the economics an insurer needs to adopt it, and a second market (Taiwan) added through configuration alone.",
       ] },
       { h: "The hackathon", p: [
-        "At the Hong Kong AI Summit: BUILD ACROSS Hackathon (200+ participants), team Fable 6.7 won the “Reinventing Insurance for an AI-native World” track, sponsored by bolttech, with my methodology. I then built this complete system.",
+        "My methodology won the “Reinventing Insurance for an AI-native World” track, sponsored by bolttech, at the Hong Kong AI Summit: BUILD ACROSS Hackathon (200+ participants). I then built this complete system.",
       ] },
     ],
   },
