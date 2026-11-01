@@ -11,7 +11,7 @@ export const PERSON = {
   legal: "TSANG Cheuk Nam",
   degree: "Industrial Engineering & Engineering Management + AI · HKUST",
   formal: "BEng in Industrial Engineering & Engineering Management, Extended Major in Artificial Intelligence · HKUST · Sep 2022 – Dec 2026",
-  availability: "Available for internships now · Full-time from January 2027",
+  availability: "Available full-time from January 2027",
   win: "Hackathon track winner · 200+ participants",
   lede: "Final-year student at HKUST. My methodology for AI-native insurance won its track at the Hong Kong AI Summit hackathon, and I built the complete system with Claude Code and Codex, which write about 95% of my code.",
 };
@@ -239,7 +239,7 @@ export const PROJECTS = [
 ];
 
 export const PAGES = [
-  { id: "home", path: "/", title: "Tony Tsang (TSANG Cheuk Nam) · Industrial Engineering & Engineering Management + AI · HKUST", desc: "Final-year HKUST Industrial Engineering & Engineering Management + AI student. Hackathon track winner. Projects in AI systems, LLM evaluation and optimization. Available for internships now; full-time from January 2027." },
+  { id: "home", path: "/", title: "Tony Tsang (TSANG Cheuk Nam) · Industrial Engineering & Engineering Management + AI · HKUST", desc: "Final-year HKUST Industrial Engineering & Engineering Management + AI student. Hackathon track winner. Projects in AI systems, LLM evaluation and optimization. Available full-time from January 2027." },
   ...PROJECTS.map(p => ({ id: p.slug, path: `/work/${p.slug}/`, title: `${p.title} · Tony Tsang`, desc: p.desc })),
   { id: "404", path: "/404.html", title: "Page not found · Tony Tsang", desc: "Page not found.", noindex: true },
 ];
